@@ -1,4 +1,5 @@
 import createButton from './createButton'
+import { HandleSubmitFunction } from '../interfaces'
 
 function createForm(): HTMLFormElement {
     const form: HTMLFormElement = document.createElement('form')
@@ -7,7 +8,7 @@ function createForm(): HTMLFormElement {
     const button: HTMLButtonElement = createButton('Set Topic')
     const options: string[] = ['hope', 'love']
 
-    const handleSubmit = (event: any) => {
+    const handleSubmit: HandleSubmitFunction = (event: Event) : void => {
         event.preventDefault()
     }
 
@@ -29,3 +30,4 @@ function createForm(): HTMLFormElement {
 }
 
 export default createForm
+ 
